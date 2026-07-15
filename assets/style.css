@@ -1,0 +1,193 @@
+/* syllogism.info — minimalist stylesheet */
+
+:root {
+  --bg: #faf9f6;
+  --card: #ffffff;
+  --ink: #1c1b18;
+  --muted: #6f6a60;
+  --line: #e4e0d6;
+  --accent: #2b4a6f;
+  --accent-soft: #eef2f7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14130f;
+    --card: #1d1c17;
+    --ink: #e8e5dd;
+    --muted: #9a958a;
+    --line: #322f27;
+    --accent: #8fb0d4;
+    --accent-soft: #232a33;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+main, footer, .masthead {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Masthead */
+.masthead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2rem;
+}
+.wordmark {
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+.therefore-mark { color: var(--accent); }
+.tagline { color: var(--muted); font-style: italic; font-size: 0.95rem; }
+
+/* Headings & text */
+h1.claim-title {
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 1.25;
+  margin: 0.5rem 0 1rem;
+  max-width: 46rem;
+}
+h2 {
+  font-size: 0.85rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.4rem;
+  margin: 2.5rem 0 1.25rem;
+}
+.lede { font-size: 1.15rem; max-width: 42rem; color: var(--muted); margin: 0.5rem 0 1rem; }
+.crumb { font-size: 0.9rem; margin: 0; }
+.crumb a { color: var(--muted); text-decoration: none; }
+.crumb a:hover { color: var(--accent); }
+.empty { color: var(--muted); max-width: 46rem; }
+
+a { color: var(--accent); }
+
+/* Tiles */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(24rem, 100%), 1fr));
+  gap: 1.25rem;
+  align-items: start;
+}
+.tile {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.4rem 1.5rem 1.1rem;
+}
+.tile h3 {
+  margin: 0 0 0.9rem;
+  font-size: 1.15rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+.tile.card {
+  display: block;
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color 0.15s ease;
+}
+.tile.card:hover { border-color: var(--accent); }
+.tile.card h3 { font-size: 1.3rem; font-weight: normal; }
+.count { color: var(--muted); font-size: 0.85rem; }
+.count.root { font-style: italic; }
+
+/* Argument steps */
+ol.steps {
+  margin: 0;
+  padding-left: 1.6rem;
+}
+ol.steps li {
+  margin: 0.45rem 0;
+}
+ol.steps li::marker {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.claim-link {
+  color: var(--ink);
+  text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  text-underline-offset: 3px;
+}
+.claim-link:hover { color: var(--accent); }
+.claim-link.self {
+  text-decoration: none;
+  font-weight: bold;
+}
+li.inference {
+  list-style: none;
+  position: relative;
+}
+.tf {
+  position: absolute;
+  left: -1.55rem;
+  color: var(--accent);
+  font-weight: bold;
+}
+.from {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+/* Citation & notes */
+.cite {
+  margin: 1rem 0 0.2rem;
+  padding-top: 0.8rem;
+  border-top: 1px dashed var(--line);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.cite a { color: var(--accent); word-break: break-all; }
+.notes {
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  background: var(--accent-soft);
+  border-radius: 6px;
+  padding: 0.7rem 0.9rem;
+}
+
+/* Lists */
+ul.uses, ul.claim-index {
+  padding-left: 1.2rem;
+  max-width: 50rem;
+}
+ul.uses li, ul.claim-index li { margin: 0.4rem 0; }
+
+/* Footer */
+footer {
+  margin-top: 4rem;
+  padding-top: 1.25rem;
+  padding-bottom: 3rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+footer a { color: var(--muted); }
+footer a:hover { color: var(--accent); }
