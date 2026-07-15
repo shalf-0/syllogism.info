@@ -73,6 +73,15 @@ argument appears on that claim's page.
 Intermediate conclusions (like "The universe has a cause") are ordinary claims,
 so they get pages too — and other arguments can build on them.
 
+**Evidential / Bayesian arguments:** add `"probable": true` to a step to render
+it as "∴ *Probably,* God exists". The step still references the plain claim, so
+the argument counts as an argument *for* that claim and appears on its page;
+tiles whose final conclusion is probabilistic are badged **evidential**. This is
+how likelihood-style arguments (fine-tuning, inference to the best explanation)
+sit alongside deductive ones, and a probabilistic conclusion can feed another
+argument's premise (Rowe's inscrutable-evil inference concludes "probably,
+gratuitous evil exists", which the evidential problem of evil then uses).
+
 ## One-time deployment setup
 
 1. Merge to `main`. The GitHub Action in `.github/workflows/deploy.yml` builds

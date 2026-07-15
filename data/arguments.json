@@ -58,30 +58,18 @@
     "beginningless-past-infinite": {
       "text": "A beginningless series of past events would be an actually infinite number of things"
     },
-    "bgv-theorem": {
-      "text": "A universe that has, on average, been expanding throughout its history cannot be past-eternal (the Borde–Guth–Vilenkin theorem)"
-    },
-    "universe-expanding": {
-      "text": "Our universe has, on average, been expanding throughout its history"
-    },
 
     "ft-data": {
       "text": "The fundamental constants and quantities of our universe are fine-tuned for the existence of life"
     },
-    "ft-trilemma": {
-      "text": "The fine-tuning of the universe is due to physical necessity, chance, or design"
+    "ft-improbable-naturalism": {
+      "text": "A life-permitting universe is very improbable given atheistic naturalism"
     },
-    "ft-not-necessity": {
-      "text": "The fine-tuning of the universe is not due to physical necessity"
+    "ft-not-improbable-theism": {
+      "text": "A life-permitting universe is not improbable given theism"
     },
-    "ft-not-chance": {
-      "text": "The fine-tuning of the universe is not due to chance"
-    },
-    "ft-design": {
-      "text": "The fine-tuning of the universe is due to design"
-    },
-    "ft-designer-god": {
-      "text": "If the fine-tuning of the universe is due to design, then God exists"
+    "likelihood-principle": {
+      "text": "Evidence that is much more probable under one hypothesis than under a rival strongly favors that hypothesis (the likelihood principle)"
     },
 
     "gratuitous-evil": {
@@ -95,22 +83,6 @@
     },
     "noseeum-inference": {
       "text": "If prolonged reflection reveals no outweighing good served by an evil, that is good (defeasible) evidence that there is none"
-    },
-
-    "god-def": {
-      "text": "If God exists, God is omnipotent and wholly good"
-    },
-    "good-opposes-evil": {
-      "text": "A wholly good being always eliminates evil as far as it can"
-    },
-    "omnipotence-no-limits": {
-      "text": "There are no limits to what an omnipotent being can do"
-    },
-    "god-implies-no-evil": {
-      "text": "If God exists, evil does not exist"
-    },
-    "evil-exists": {
-      "text": "Evil exists"
     },
 
     "loving-god-open": {
@@ -130,28 +102,6 @@
     },
     "god-perfectly-loving": {
       "text": "If God exists, God is perfectly loving"
-    },
-    "honest-doubters": {
-      "text": "There are former believers who lost their belief through honest inquiry and would welcome its return"
-    },
-    "isolated-nontheists": {
-      "text": "There are people who have never so much as encountered the idea of God"
-    },
-    "doubters-not-resisting": {
-      "text": "Honest doubters and isolated nontheists are not resisting a personal relationship with God"
-    },
-
-    "here-is-a-hand": {
-      "text": "Here is one hand"
-    },
-    "here-is-another-hand": {
-      "text": "Here is another hand"
-    },
-    "hands-are-external": {
-      "text": "Hands are objects external to our minds"
-    },
-    "two-external-objects": {
-      "text": "At least two external objects exist"
     },
 
     "sensory-coherence": {
@@ -183,8 +133,7 @@
         "container": "The Blackwell Companion to Natural Theology, ed. W. L. Craig & J. P. Moreland",
         "publisher": "Wiley-Blackwell",
         "url": "https://doi.org/10.1002/9781444308334"
-      },
-      "notes": "The Leibnizian version of the cosmological argument. The main battlegrounds are the Principle of Sufficient Reason itself and the 'gap problem' of step 6: why the necessary being should be God rather than, say, a necessarily existing physical state."
+      }
     },
     "kalam": {
       "title": "The Kalam Cosmological Argument",
@@ -202,19 +151,16 @@
         "container": "The Blackwell Companion to Natural Theology, ed. W. L. Craig & J. P. Moreland",
         "publisher": "Wiley-Blackwell",
         "url": "https://doi.org/10.1002/9781444308334"
-      },
-      "notes": "Revived from medieval Islamic philosophy by Craig. Step 4 is defended by conceptual analysis: a cause of all space, time, and matter must be spaceless, timeless, immaterial, and — Craig argues — personal, since only free agency can explain a temporal effect of a timeless cause."
+      }
     },
     "fine-tuning": {
       "title": "The Fine-Tuning Argument",
       "steps": [
         { "claim": "ft-data" },
-        { "claim": "ft-trilemma" },
-        { "claim": "ft-not-necessity" },
-        { "claim": "ft-not-chance" },
-        { "claim": "ft-design", "from": [1, 2, 3, 4] },
-        { "claim": "ft-designer-god" },
-        { "claim": "god-exists", "from": [5, 6] }
+        { "claim": "ft-improbable-naturalism" },
+        { "claim": "ft-not-improbable-theism" },
+        { "claim": "likelihood-principle" },
+        { "claim": "god-exists", "from": [1, 2, 3, 4], "probable": true }
       ],
       "source": {
         "authors": "Robin Collins",
@@ -223,8 +169,7 @@
         "container": "The Blackwell Companion to Natural Theology, ed. W. L. Craig & J. P. Moreland",
         "publisher": "Wiley-Blackwell",
         "url": "https://doi.org/10.1002/9781444308334"
-      },
-      "notes": "Presented here in the popular trilemma form; Collins's own formulation is a likelihood argument (fine-tuning is far more probable given theism than given a naturalistic single universe). The chance disjunct is where the multiverse objection enters."
+      }
     },
 
     "evidential-evil": {
@@ -240,28 +185,7 @@
         "title": "The Problem of Evil and Some Varieties of Atheism",
         "container": "American Philosophical Quarterly 16 (4): 335–341",
         "publisher": ""
-      },
-      "notes": "Rowe's classic formulation. Unlike the logical problem, it claims only that gratuitous evil probably exists, so the conclusion is probabilistic. The skeptical theist response attacks premise 1 via our cognitive limitations."
-    },
-    "logical-evil": {
-      "title": "The Logical Problem of Evil",
-      "steps": [
-        { "claim": "god-def" },
-        { "claim": "good-opposes-evil" },
-        { "claim": "omnipotence-no-limits" },
-        { "claim": "god-implies-no-evil", "from": [1, 2, 3] },
-        { "claim": "evil-exists" },
-        { "claim": "god-does-not-exist", "from": [4, 5] }
-      ],
-      "source": {
-        "authors": "J. L. Mackie",
-        "year": 1955,
-        "title": "Evil and Omnipotence",
-        "container": "Mind 64 (254): 200–212",
-        "publisher": "",
-        "url": "https://doi.org/10.1093/mind/LXIV.254.200"
-      },
-      "notes": "Mackie claimed the theistic set of beliefs is internally inconsistent. Plantinga's free will defence (1974) is widely held to have shown premises 2 and 3 are not necessary truths, moving the debate to the evidential version."
+      }
     },
     "divine-hiddenness": {
       "title": "The Argument from Divine Hiddenness",
@@ -280,35 +204,16 @@
         "title": "Divine Hiddenness and Human Reason",
         "container": "",
         "publisher": "Cornell University Press"
-      },
-      "notes": "The other major contemporary argument for atheism alongside the problem of evil. Everything turns on whether nonresistant nonbelief actually occurs and on whether a loving God might have reasons to permit temporary hiddenness."
+      }
     },
 
-    "moorean-proof": {
-      "title": "Moore’s Proof of an External World",
-      "steps": [
-        { "claim": "here-is-a-hand" },
-        { "claim": "here-is-another-hand" },
-        { "claim": "hands-are-external" },
-        { "claim": "two-external-objects", "from": [1, 2, 3] },
-        { "claim": "external-world", "from": [4] }
-      ],
-      "source": {
-        "authors": "G. E. Moore",
-        "year": 1939,
-        "title": "Proof of an External World",
-        "container": "Proceedings of the British Academy 25: 273–300",
-        "publisher": ""
-      },
-      "notes": "Moore held the premises are more certain than any skeptical principle that could be used against them. The standard complaint is that the proof is question-begging or fails to transmit warrant (Wright 2002); Moore's reply is that a proof need not convince the skeptic to be a proof."
-    },
     "ibe-external-world": {
       "title": "The Explanationist Argument for the External World",
       "steps": [
         { "claim": "sensory-coherence" },
         { "claim": "rwh-best-explanation" },
         { "claim": "ibe-principle" },
-        { "claim": "external-world", "from": [1, 2, 3] }
+        { "claim": "external-world", "from": [1, 2, 3], "probable": true }
       ],
       "source": {
         "authors": "Jonathan Vogel",
@@ -316,8 +221,7 @@
         "title": "Cartesian Skepticism and Inference to the Best Explanation",
         "container": "Journal of Philosophy 87 (11): 658–666",
         "publisher": ""
-      },
-      "notes": "Descends from Russell's 'instinctive belief' response in The Problems of Philosophy (1912). Vogel argues the real-world hypothesis beats skeptical rivals on explanatory virtues like simplicity, since skeptical hypotheses must smuggle in an isomorphic copy of the world to explain the same data."
+      }
     },
 
     "actual-infinite": {
@@ -334,33 +238,14 @@
         "container": "The Blackwell Companion to Natural Theology, ed. W. L. Craig & J. P. Moreland",
         "publisher": "Wiley-Blackwell",
         "url": "https://doi.org/10.1002/9781444308334"
-      },
-      "notes": "Defended with thought experiments like Hilbert's Hotel, which are said to show that an actual (as opposed to potential) infinite leads to absurdities. Critics respond that Cantorian set theory renders the actual infinite coherent."
+      }
     },
-    "bgv-expansion": {
-      "title": "The Argument from Cosmic Expansion",
-      "steps": [
-        { "claim": "bgv-theorem" },
-        { "claim": "universe-expanding" },
-        { "claim": "universe-began", "from": [1, 2] }
-      ],
-      "source": {
-        "authors": "Arvind Borde, Alan H. Guth & Alexander Vilenkin",
-        "year": 2003,
-        "title": "Inflationary Spacetimes Are Incomplete in Past Directions",
-        "container": "Physical Review Letters 90: 151301",
-        "publisher": "",
-        "url": "https://doi.org/10.1103/PhysRevLett.90.151301"
-      },
-      "notes": "The BGV theorem shows that any universe with a positive average expansion rate is geodesically incomplete to the past. Whether past-incompleteness amounts to an absolute beginning — and whether exotic models escape the theorem's assumptions — is disputed."
-    },
-
     "rowe-fawn": {
       "title": "The Inference from Inscrutable Evil",
       "steps": [
         { "claim": "inscrutable-evils" },
         { "claim": "noseeum-inference" },
-        { "claim": "gratuitous-evil", "from": [1, 2] }
+        { "claim": "gratuitous-evil", "from": [1, 2], "probable": true }
       ],
       "source": {
         "authors": "William L. Rowe",
@@ -368,25 +253,7 @@
         "title": "The Problem of Evil and Some Varieties of Atheism",
         "container": "American Philosophical Quarterly 16 (4): 335–341",
         "publisher": ""
-      },
-      "notes": "Rowe's support for the factual premise of the evidential argument. Wykstra's 'noseeum' objection targets step 2: given the gap between our cognition and God's, our failure to see an outweighing good is poor evidence that there isn't one."
-    },
-    "nonresistant-cases": {
-      "title": "The Case for Nonresistant Nonbelief",
-      "steps": [
-        { "claim": "honest-doubters" },
-        { "claim": "isolated-nontheists" },
-        { "claim": "doubters-not-resisting" },
-        { "claim": "nonresistant-nonbelief", "from": [1, 2, 3] }
-      ],
-      "source": {
-        "authors": "J. L. Schellenberg",
-        "year": 2007,
-        "title": "The Wisdom to Doubt: A Justification of Religious Skepticism",
-        "container": "",
-        "publisher": "Cornell University Press"
-      },
-      "notes": "Schellenberg's fuller taxonomy of nonbelief includes reflective former believers, lifelong seekers, converts to nontheistic religions, and isolated nontheists — categories meant to make blaming all nonbelief on resistance implausible."
+      }
     }
   }
 }

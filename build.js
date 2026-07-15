@@ -58,6 +58,19 @@ for (const [id, arg] of Object.entries(args)) {
   }
 }
 
+// Orphan claims: never used in any argument and not featured — probably leftovers.
+{
+  const used = new Set();
+  for (const arg of Object.values(args)) {
+    for (const step of arg.steps || []) used.add(step.claim);
+  }
+  for (const [id, claim] of Object.entries(claims)) {
+    if (!used.has(id) && !claim.featured && !(claim.negation && used.has(claim.negation))) {
+      warnings.push(`claim "${id}" is not used by any argument`);
+    }
+  }
+}
+
 if (errors.length) {
   console.error("Data validation failed:\n" + errors.map((e) => "  ✗ " + e).join("\n"));
   process.exit(1);
@@ -144,16 +157,20 @@ function renderArgument(argId, currentClaimId) {
       const claim = claims[step.claim];
       const isSelf = step.claim === currentClaimId;
       const link = `<a class="claim-link${isSelf ? " self" : ""}" href="${claimUrl(step.claim)}">${esc(claim.text)}</a>`;
+      const prob = step.probable ? `<em class="probably">probably,</em> ` : "";
       if (step.from) {
         const from = `<span class="from">from ${step.from.join(", ")}</span>`;
-        return `  <li class="inference"><span class="tf">∴</span> ${link}. ${from}</li>`;
+        return `  <li class="inference"><span class="tf">∴</span> ${prob}${link}. ${from}</li>`;
       }
-      return `  <li class="premise">${link}.</li>`;
+      return `  <li class="premise">${prob}${link}.</li>`;
     })
     .join("\n");
   const notes = arg.notes ? `<p class="notes">${esc(arg.notes)}</p>` : "";
+  const badge = arg.steps[arg.steps.length - 1].probable
+    ? ` <span class="badge">evidential</span>`
+    : "";
   return `<article class="tile" id="arg-${esc(argId)}">
-<h3>${esc(arg.title)}</h3>
+<h3>${esc(arg.title)}${badge}</h3>
 <ol class="steps">
 ${steps}
 </ol>

@@ -119,6 +119,20 @@ a { color: var(--accent); }
 .tile.card h3 { font-size: 1.3rem; font-weight: normal; }
 .count { color: var(--muted); font-size: 0.85rem; }
 .count.root { font-style: italic; }
+.badge {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.55rem 0.1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.probably { font-style: italic; }
 
 /* Argument steps */
 ol.steps {
