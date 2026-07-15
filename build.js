@@ -111,13 +111,14 @@ function page({ title, heading, content, pathToRoot = "" }) {
 <header class="masthead">
   <a class="wordmark" href="/"><span class="therefore-mark">∴</span> ${esc(site.title)}</a>
   <span class="tagline">${esc(site.tagline)}</span>
+  <nav class="site-nav"><a href="/graph/">graph</a></nav>
 </header>
 <main>
 ${content}
 </main>
 <footer>
   <p>${esc(site.description)}</p>
-  <p><a href="/">All claims</a> · <a href="/admin/">Edit this site</a></p>
+  <p><a href="/">All claims</a> · <a href="/graph/">Graph</a> · <a href="/admin/">Edit this site</a></p>
 </footer>
 </body>
 </html>`;
@@ -243,6 +244,7 @@ for (const [id, claim] of Object.entries(claims)) {
     .join("\n");
 
   const content = `<p class="lede">${esc(site.description)}</p>
+<p class="lede-link"><a href="/graph/">Explore the full argument graph →</a></p>
 <section>
 <h2>The big questions</h2>
 <div class="tiles">
@@ -267,6 +269,9 @@ fs.copyFileSync(path.join(ROOT, "assets", "style.css"), path.join(DIST, "style.c
 fs.mkdirSync(path.join(DIST, "admin"), { recursive: true });
 fs.copyFileSync(path.join(ROOT, "assets", "admin.html"), path.join(DIST, "admin", "index.html"));
 fs.copyFileSync(path.join(ROOT, "assets", "admin.js"), path.join(DIST, "admin", "admin.js"));
+fs.mkdirSync(path.join(DIST, "graph"), { recursive: true });
+fs.copyFileSync(path.join(ROOT, "assets", "graph.html"), path.join(DIST, "graph", "index.html"));
+fs.copyFileSync(path.join(ROOT, "assets", "graph.js"), path.join(DIST, "graph", "graph.js"));
 fs.copyFileSync(DATA_FILE, path.join(DIST, "data.json"));
 if (fs.existsSync(path.join(ROOT, "CNAME"))) {
   fs.copyFileSync(path.join(ROOT, "CNAME"), path.join(DIST, "CNAME"));
