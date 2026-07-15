@@ -118,7 +118,7 @@ ${content}
 </main>
 <footer>
   <p>${esc(site.description)}</p>
-  <p><a href="/">All claims</a> · <a href="/graph/">Graph</a> · <a href="/admin/">Edit this site</a></p>
+  <p><a href="/">All claims</a> · <a href="/graph/">Graph</a></p>
 </footer>
 </body>
 </html>`;
@@ -266,9 +266,6 @@ ${rows}
 
 // Static assets
 fs.copyFileSync(path.join(ROOT, "assets", "style.css"), path.join(DIST, "style.css"));
-fs.mkdirSync(path.join(DIST, "admin"), { recursive: true });
-fs.copyFileSync(path.join(ROOT, "assets", "admin.html"), path.join(DIST, "admin", "index.html"));
-fs.copyFileSync(path.join(ROOT, "assets", "admin.js"), path.join(DIST, "admin", "admin.js"));
 fs.mkdirSync(path.join(DIST, "graph"), { recursive: true });
 fs.copyFileSync(path.join(ROOT, "assets", "graph.html"), path.join(DIST, "graph", "index.html"));
 fs.copyFileSync(path.join(ROOT, "assets", "graph.js"), path.join(DIST, "graph", "graph.js"));

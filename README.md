@@ -10,19 +10,13 @@ single zero-dependency Node script, **`build.js`**.
 
 ## Editing the site
 
-Three ways, pick whichever is convenient:
+All content lives in `data/arguments.json`. Edit it and push — the GitHub
+Action rebuilds and redeploys in about a minute.
 
-1. **The web editor** — visit `/admin/` on the live site. Load the data, edit
-   claims and arguments in forms, then commit straight back to GitHub (the site
-   redeploys automatically in ~1 minute). To commit you need a GitHub
-   fine-grained personal access token scoped to this repository with
-   **Contents: Read and write** (GitHub → Settings → Developer settings →
-   Fine-grained tokens). The token is stored only in your browser's
-   localStorage.
-2. **GitHub's web UI** — edit `data/arguments.json` directly on github.com and
-   commit. Same automatic redeploy.
-3. **Locally** — edit the file, run `node build.js` to validate and preview
-   (`python3 -m http.server -d dist`), then push.
+- **On GitHub** — edit `data/arguments.json` directly in the github.com web UI
+  and commit. Simplest for a quick addition.
+- **Locally** — edit the file, run `node build.js` to validate and preview
+  (`python3 -m http.server -d dist`), then commit and push.
 
 The build fails loudly on dangling references, so a typo'd claim id can't
 silently break the site.
